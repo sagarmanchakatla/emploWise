@@ -47,6 +47,7 @@ const UserList: React.FC = () => {
   // const { toast } = useToast();
 
   useEffect(() => {
+    console.log(selectedUser);
     dispatch(fetchUsers(1));
   }, [dispatch]);
 

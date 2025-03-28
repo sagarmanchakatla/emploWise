@@ -22,7 +22,7 @@ const EditUser: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
-  const { users, loading } = useAppSelector((state) => state.users);
+  const { users } = useAppSelector((state) => state.users);
   const user = users.find((u) => u.id === Number(id));
   // const { toast } = useToast();
 
