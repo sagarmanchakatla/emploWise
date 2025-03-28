@@ -49,7 +49,7 @@ const LandingPage: React.FC = () => {
                 onClick={handleLogIn}
                 className="gap-2"
               >
-                {/* <LogOut className="h-4 w-4" /> */}
+                <LogIn className="h-4 w-4" />
                 <span className="hidden sm:inline">LogIn</span>
               </Button>
             </div>
