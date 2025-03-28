@@ -17,7 +17,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { ModeToggle } from "./mode-toggle";
+// import { ModeToggle } from "./mode-toggle";
 // import { useToast } from "@/components/ui/use-toast";
 
 const Login: React.FC = () => {
@@ -44,9 +44,9 @@ const Login: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-4">
-      <div className="absolute top-4 right-4">
+      {/* <div className="absolute top-4 right-4">
         <ModeToggle />
-      </div>
+      </div> */}
 
       <div className="w-full max-w-md">
         <div className="flex justify-center mb-8">

@@ -14,6 +14,7 @@ import UserList from "./components/UserList";
 import EditUser from "./components/EditUser";
 import { ThemeProvider } from "./components/theme-provider";
 import Header from "./components/Header";
+import LandingPage from "./components/LandingPage";
 
 // Protected Route Component
 const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({
@@ -31,7 +32,8 @@ const App: React.FC = () => {
           <Header />
           <div className="min-h-screen bg-background ">
             <Routes>
-              <Route path="/" element={<Login />} />
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/login" element={<Login />} />
               <Route
                 path="/users"
                 element={
@@ -48,7 +50,7 @@ const App: React.FC = () => {
                   </ProtectedRoute>
                 }
               />
-              <Route path="*" element={<Navigate to="/" replace />} />
+              {/* <Route path="*" element={<Navigate to="/" replace />} /> */}
             </Routes>
           </div>
         </Router>
