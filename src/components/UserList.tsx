@@ -33,7 +33,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import { useToast } from "@/components/ui/use-toast";
+// import { useToast } from "@/components/ui/use-toast";
 
 const UserList: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -44,7 +44,7 @@ const UserList: React.FC = () => {
   const [selectedUser, setSelectedUser] = useState<User | null>(null);
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
   const [userToDelete, setUserToDelete] = useState<User | null>(null);
-  const { toast } = useToast();
+  // const { toast } = useToast();
 
   useEffect(() => {
     dispatch(fetchUsers(1));
@@ -70,18 +70,18 @@ const UserList: React.FC = () => {
       setShowDeleteDialog(false);
 
       if (deleteUser.fulfilled.match(result)) {
-        toast({
-          variant: "success",
-          title: "User deleted",
-          description: `${userToDelete.first_name} ${userToDelete.last_name} has been removed successfully.`,
-        });
+        // toast({
+        //   variant: "success",
+        //   title: "User deleted",
+        //   description: `${userToDelete.first_name} ${userToDelete.last_name} has been removed successfully.`,
+        // });
       } else {
-        toast({
-          variant: "destructive",
-          title: "Delete failed",
-          description:
-            "There was an error deleting the user. Please try again.",
-        });
+        // toast({
+        //   variant: "destructive",
+        //   title: "Delete failed",
+        //   description:
+        //     "There was an error deleting the user. Please try again.",
+        // });
       }
     }
   };

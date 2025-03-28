@@ -16,7 +16,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { useToast } from "@/components/ui/use-toast";
+// import { useToast } from "@/components/ui/use-toast";
 
 const EditUser: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -24,7 +24,7 @@ const EditUser: React.FC = () => {
   const dispatch = useAppDispatch();
   const { users, loading } = useAppSelector((state) => state.users);
   const user = users.find((u) => u.id === Number(id));
-  const { toast } = useToast();
+  // const { toast } = useToast();
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -52,19 +52,19 @@ const EditUser: React.FC = () => {
       setIsSubmitting(false);
 
       if (updateUser.fulfilled.match(result)) {
-        toast({
-          variant: "success",
-          title: "User updated",
-          description: `${firstName} ${lastName}'s information has been updated successfully.`,
-        });
+        // toast({
+        //   variant: "success",
+        //   title: "User updated",
+        //   description: `${firstName} ${lastName}'s information has been updated successfully.`,
+        // });
         navigate("/users");
       } else {
-        toast({
-          variant: "destructive",
-          title: "Update failed",
-          description:
-            "There was an error updating the user. Please try again.",
-        });
+        // toast({
+        //   variant: "destructive",
+        //   title: "Update failed",
+        //   description:
+        //     "There was an error updating the user. Please try again.",
+        // });
       }
     }
   };

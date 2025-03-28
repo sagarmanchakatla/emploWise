@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { ModeToggle } from "./mode-toggle";
-import { useToast } from "@/components/ui/use-toast";
+// import { useToast } from "@/components/ui/use-toast";
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState<string>("eve.holt@reqres.in");
@@ -26,18 +26,18 @@ const Login: React.FC = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const { loading, error } = useAppSelector((state) => state.auth);
-  const { toast } = useToast();
+  // const { toast } = useToast();
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     const result = await dispatch(loginUser({ email, password }));
 
     if (loginUser.fulfilled.match(result)) {
-      toast({
-        variant: "success",
-        title: "Login successful",
-        description: "Welcome back! You have been logged in successfully.",
-      });
+      // toast({
+      //   variant: "success",
+      //   title: "Login successful",
+      //   description: "Welcome back! You have been logged in successfully.",
+      // });
       navigate("/users");
     }
   };
